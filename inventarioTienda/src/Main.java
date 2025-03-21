@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -44,6 +43,8 @@ public class Main {
                 }
                 System.out.println("--------------------------");
                 System.out.println("\n");
+
+
             } else if (opcion == 2) {
                 if (datos.size() == 0) { // validar si la lista no esta vacia
                     System.out.println("No hay datos para editar");
@@ -95,7 +96,7 @@ public class Main {
 
         }while (opcion != 0) ;
         entrada.close();
-        
+
         System.out.println("ha salido del menú");
 
         }
