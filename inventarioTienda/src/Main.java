@@ -95,6 +95,7 @@ public class Main {
 
         }while (opcion != 0) ;
         entrada.close();
+        
         System.out.println("ha salido del menú");
 
         }
