@@ -66,7 +66,6 @@ public class Main {
                 cantidad.add(cantidadProducto);
                 precioIva = precioSinIVA + (cantidadProducto * IVA);
                 cantidadIVA.add(precioIva);
-
                 System.out.println("el producto: " + producto+ " ingresado exitosamente \n");
 
                 precioIva=0; // limpiar la variable
@@ -96,9 +95,9 @@ public class Main {
                         System.out.println("No existe el numero de stock para acutalizar");
 
                     }else{ // actualizar el dato en la lista
+
                         System.out.println("Ingresa el nuevo producto : ");
                         acualizarProducto = entrada.nextLine();
-                        entrada.nextLine();
                         System.out.println("Ingresa el nuevo precio : ");
                         acualizarPrecio = entrada.nextDouble();
                         entrada.nextLine();
@@ -109,14 +108,17 @@ public class Main {
                         nombre.set(codActualizar, acualizarProducto);
                         precio.set(codActualizar, acualizarPrecio);
                         cantidad.set(codActualizar,acualizarCantidad);
+                        precioIva = acualizarPrecio + (acualizarPrecio * IVA);
+                        cantidadIVA.set(codActualizar, precioIva);
 
                         System.out.println("El producto: "+nombre.get(codActualizar)+ " actualizado exitosamente" );
-                        System.out.println("-------------------------------------\n");
 
+                        System.out.println("-------------------------------------\n");
                     }
+
                 }
 
-                System.out.println("\n");
+
             }else if (opcion == 4) {
                 if (nombre.size() == 0) { // validar si la lista no esta vacia
                     System.out.println("No hay productos para eliminar");
